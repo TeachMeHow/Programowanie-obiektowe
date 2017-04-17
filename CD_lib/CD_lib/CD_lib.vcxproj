@@ -138,7 +138,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Album.cpp" />
+    <ClCompile Include="Compilation.cpp" />
+    <ClCompile Include="Disc.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Track.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDLIB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
