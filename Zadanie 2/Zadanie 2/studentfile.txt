@@ -1,0 +1,8 @@
+Student 1: 
+Imie: wer
+Nazwisko: er
+Numer albumu: 234
+Srednia: 3.3
+Przedmioty: 
+brak przedmiotow
+
