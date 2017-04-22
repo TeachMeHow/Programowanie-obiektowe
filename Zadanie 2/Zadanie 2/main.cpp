@@ -1,8 +1,7 @@
 #include "Student.h"
 #include <algorithm>
-#include <cstdio>
-#include <iostream>
-#include <fstream>
+#include <cstdio> // memcpy()
+#include <fstream> // ofstream, ios
 
 CStudent* Student;
 size_t blocksize = sizeof(CStudent);
@@ -23,8 +22,9 @@ int Menu()
 			tempStudent = new CStudent[++K];
 			for (size_t i = 0; i < K - 1; i++)
 			{
-				memcpy(tempStudent + i, Student + i, sizeof CStudent);
+				*(tempStudent + i) = *(Student+i); //wywolywany jest konstruktor kopiujacy (domyslny!)
 			}
+
 			delete[] Student;
 			Student = tempStudent;
 			Student[K - 1].nowe_dane();
@@ -52,6 +52,7 @@ int Menu()
 			return 0; break;
 
 		case 4: return 1;
+		default: break;
 		}
 	}
 }

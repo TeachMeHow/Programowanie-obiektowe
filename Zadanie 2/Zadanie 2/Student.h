@@ -1,25 +1,24 @@
 #pragma once
-#include <iostream>
-#include <string>
+#include <iostream> // std::cin, std::cout
+#include <string> //string
 using namespace std;
 class CStudent
 {
-public:
-	CStudent();
-	~CStudent();
-	
 protected:
 	string imie;
 	string nazwisko;
 	int nr_albumu;
 	double srednia;
-	string* przedmioty;
 	size_t N;
-	
 public:
+	string* przedmioty;
+public:
+	CStudent();
+	//CStudent(const CStudent &obj);
+	~CStudent();
+
 	void nowe_dane();
 	void wyswietl();
-	void zapis();
 	friend ostream &operator<<(ostream &output, CStudent &input);
 };
 

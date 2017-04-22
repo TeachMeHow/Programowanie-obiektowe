@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Student.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Student.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{04EC1119-98EE-4F64-84B5-B7B8AC383D47}</ProjectGuid>
     <RootNamespace>Zadanie2</RootNamespace>
@@ -109,13 +116,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\zadanie 2\main.cpp" />
-    <ClCompile Include="..\..\..\..\Desktop\zadanie 2\Student.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\zadanie 2\Student.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,14 +1,20 @@
 #include "Student.h"
+#include <iomanip> // setprecision
 
 CStudent::CStudent()
 {
 	przedmioty = NULL;
 }
 
+//konstruktor kopiujacy
+/* CStudent::CStudent(const CStudent &obj) 
+{
+}
+*/
 CStudent::~CStudent()
 {
-
-	delete [] przedmioty;
+	cout << "Freeing memory!" << endl;
+	// delete[] przedmioty;
 }
 
 
@@ -22,9 +28,10 @@ void CStudent::nowe_dane()
 	cout << "\nNumer albumu: ";
 	cin >> nr_albumu;
 	cout << "\nSrednia: ";
-	cin >> srednia;
+	cin >> std::fixed >> std::setprecision(4)>> srednia;
 	cout << "\nIle przedmiotow?: ";
 	cin >> N;
+
 	przedmioty = new string[N];
 	for (size_t i = 0; i < N; i++)
 	{
@@ -51,15 +58,10 @@ void CStudent::wyswietl()
 }
 
 
-void CStudent::zapis()
-{
-}
-
-
 ostream & operator<<(ostream & output, CStudent & input)
 {
-	output << "Imie: " << input.imie << endl << "Nazwisko: " << input.nazwisko << endl << "Numer albumu: " << input.nr_albumu
-		<< endl << "Srednia: " << input.srednia << endl << "Przedmioty: " << endl;
+	output << "Imie: " << input.imie << endl << "Nazwisko: " << input.nazwisko << endl << "Numer albumu: " 
+		<< input.nr_albumu << endl << "Srednia: " << input.srednia << endl << "Przedmioty: " << endl;
 	if (input.N != 0)
 	{
 		for (size_t i = 0; i < input.N; i++)
