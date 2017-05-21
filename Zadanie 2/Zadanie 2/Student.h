@@ -14,7 +14,7 @@ public:
 	string* przedmioty;
 public:
 	CStudent();
-	//CStudent(const CStudent &obj);
+	//CStudent(const CStudent &obj); //konstruktor kopiujacy
 	~CStudent();
 
 	void nowe_dane();
